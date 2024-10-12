@@ -38,7 +38,7 @@ app.post("/signin", function(req, res){
 
     if(foundUser){
         const token = jwt.sign({
-            username: username
+            username: users[i].username
         }, JWT_SECRET);
 
         res.json({
